@@ -1,0 +1,60 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/rex.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(../img/cactus.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    /* Infinite - animation won't stop, linear - acceleration of animation   */
+    animation: cactusMov 2s infinite linear; 
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 580px;
+    } 
+    100% {
+        left: -20px;
+    }
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    /* 0% means default position of Dino */
+    0% {
+        top: 150px;
+    } 
+    30% {
+        top: 110px;
+    }
+    50% {
+        top: 80px;
+    }
+    80% {
+        top: 120px;
+    }
+    /* 100% means it changes position */
+    100% {
+        top: 150px;
+    }
+}
